@@ -1,13 +1,15 @@
 from django.urls import path
 from .views import index
-from .views import add
-from .views import edit
+from .views import add_student
+from .views import update,delete
 
 app_name = 'student'
 urlpatterns = [
     
     path('', index, name='index'),
-    path('add', add, name='add'),
-    path('edit', edit, name='edit'),
+    path('add', add_student, name='add'),
+    path('update/<int:id>', update, name='update'),
+    path('delete/<int:id>', delete, name='delete'),
+
     
 ]

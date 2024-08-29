@@ -1,4 +1,5 @@
 function openModal() {
+   id=event.target.getAttribute('data-id')
    document.getElementById('deleteModal').classList.remove('hidden');
 }
 
@@ -7,7 +8,6 @@ function closeModal() {
 }
 
 function deleteItem() {
-   // Logique de suppression ici
-   alert('Élément supprimé');
+   window.location.href=id
    closeModal();
 }

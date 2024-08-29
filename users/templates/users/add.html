@@ -86,47 +86,25 @@
                </h1>
                <form action="#" method="POST" class="grid grid-cols-1 gap-6">
                   <!-- Champ pseudo -->
+                  {% csrf_token %}
+                  
                   <div>
-                     <label
-                        for="pseudo"
-                        class="block text-sm font-medium text-gray-700"
-                        >Pseudo</label
-                     >
-                     <input
-                        type="text"
-                        id="pseudo"
-                        name="pseudo"
-                        class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                     />
-                  </div>
-                  <!-- Mot de passe -->
-                  <div>
-                     <label
-                        for="motdepasse"
-                        class="block text-sm font-medium text-gray-700"
-                        >Mot de passe</label
-                     >
-                     <input
-                        type="password"
-                        id="motdepasse"
-                        name="motdepasse"
-                        class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                     />
-                  </div>
-                  <!-- Confirmer mot de passe -->
-                  <div>
-                     <label
-                        for="confirmermotdepasse"
-                        class="block text-sm font-medium text-gray-700"
-                        >Confirmer mot de passe</label
-                     >
-                     <input
-                        type="password"
-                        id="confirmermotdepasse"
-                        name="confirmermotdepasse"
-                        class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                     />
-                  </div>
+                     <label for="id_pseudo">Username:</label>
+                 
+                 
+                 
+                 <input type="text" name="username" maxlength="10"  id="id_pseudo">
+                     
+                 </div>
+                 <div>
+                  <label for="id_password">Password:</label>
+              
+              
+              
+              <input type="password" name="password" maxlength="10"  id="id_password">
+                  
+              </div>
+
                   <!-- Boutons -->
                   <div class="flex justify-center space-x-4">
                      <button

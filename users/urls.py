@@ -1,15 +1,11 @@
+
 from django.urls import path
-from .views import index
-from .views import add
-from .views import edit
+from .views import index, add_user, update_user  
 
 
-app_name = 'users'
+app_name="users"
 urlpatterns = [
-    
     path('', index, name='index'),
-    path('add', add, name='add'),
-    path('edit', edit, name='edit'),
-    
+    path('add/', add_user, name='add_user'),
+    path('update/<int:user_id>/', update_user, name='update_user'),
 ]
-
